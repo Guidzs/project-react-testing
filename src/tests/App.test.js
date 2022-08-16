@@ -56,7 +56,8 @@ describe('Teste o componente <App.js />', () => {
     const { history } = renderWithRouter(<App />);
 
     history.push('/tyrbe');
-    const notFoundTitle = screen.getByRole('heading', { level: 2, name: /not found/i });
+    const notFoundTitle = screen
+      .getByRole('heading', { level: 2, name: /Page requested not found/i });
     expect(notFoundTitle).toBeInTheDocument();
   });
 });
